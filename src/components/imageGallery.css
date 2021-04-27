@@ -1,0 +1,80 @@
+.grid-container
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+   
+}
+.button-align
+{
+  text-align: center;
+}
+.button {
+    border-radius: 5px;
+    border: none;
+    background: none;
+    color: #FFFFFF;
+    text-align: center;
+    border:1px solid #fff;
+    padding: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+.button-move
+{
+  margin-left: -80px;
+}
+.grid-container .demo {
+    transition: transform .5s ease;
+}
+.grid-container :hover .demo {
+    transform: scale(1.5);
+}
+.custom-image-size
+{
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 10%;
+   
+    cursor: pointer;
+}
+.img-hover-zoom {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.10);
+}
